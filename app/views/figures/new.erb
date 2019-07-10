@@ -5,5 +5,13 @@
   <lable>Name</lable>
   <input type="text" name="figure[name]" id="figure_name">
 
+  <h2>Titles</h2>
+  <ol>
+  <% Figure.all.each do |figure| %>
+  <li><%= figure.title %>
+  <% end %>
+  </ol>
+
+
 
 </form>
