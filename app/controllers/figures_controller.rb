@@ -10,9 +10,9 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Landmark.create(name: params["figure"]["name"])
-    
+
     @figure.save
-    redirect to "/landmarks/#{@landmark.id}"
+    redirect to "/figures"
   end
 
 
