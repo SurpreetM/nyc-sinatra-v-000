@@ -11,7 +11,9 @@
   <% end %>
 
   <h2><lable>Landmarks</lable></h2>
-
+  <% Landmark.all.each do |landmark| %>
+  <input type="radio" name="figure[landmark]" id="figure_landmark"><%= landmark.name %>
+  <% end %>
 
 
 
