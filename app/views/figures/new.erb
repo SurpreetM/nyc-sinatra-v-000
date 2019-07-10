@@ -6,11 +6,11 @@
   <input type="text" name="figure[name]" id="figure_name">
 
   <h2>Titles</h2>
-  <ol>
+
   <% Title.all.each do |title| %>
-  <li><%= title.name %>
+  <input type="radio" name="figure[title]" id="figure_title"><%= title.name %>
   <% end %>
-  </ol>
+
 
 
 
