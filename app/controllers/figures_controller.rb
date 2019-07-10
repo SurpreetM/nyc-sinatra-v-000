@@ -35,7 +35,7 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     @figure = Figure.find(params[:id])
-    @figure.name = params["figure"]["name"]
+    @figure = params["figure"]
   end
 
 
