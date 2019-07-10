@@ -8,5 +8,13 @@ class FiguresController < ApplicationController
     erb :"/figures/new"
   end
 
+  post '/figures' do
+    @landmark = Landmark.create(name: params["landmark"]["name"])
+    @landmark.year_completed = params["landmark"]["year_completed"]
+    @landmark.figure_id = params["figure_id"]
+    @landmark.save
+    redirect to "/landmarks/#{@landmark.id}"
+  end
+
 
 end
