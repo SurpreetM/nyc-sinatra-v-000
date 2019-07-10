@@ -10,8 +10,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Landmark.create(name: params["figure"]["name"])
-    @landmark.year_completed = params["landmark"]["year_completed"]
-    @landmark.figure_id = params["figure_id"]
+    
     @figure.save
     redirect to "/landmarks/#{@landmark.id}"
   end
